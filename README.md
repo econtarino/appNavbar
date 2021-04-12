@@ -22,7 +22,7 @@ Herramientas utilizadas
 
 - [ReactJS] - HTML enhanced for web apps!
 - [MaterialUI] - awesome web-based text editor
-- [node.js] - evented I/O for theAngularJS backend
+- [node.js] - npm commands
 
 
 ## Instalación
