@@ -9,13 +9,10 @@ Proyecto Ecommerce para mostrar un navbar por material ui,
 React & Material UI .
 
 
-## Features
+## Consigna
 
-- Import a HTML file and watch it magically convert to Markdown
-- Drag and drop images (requires your Dropbox account be linked)
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
+Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado.
+Crea un componente ItemListContainer. Impórtalo dentro de App.js, y abajo de NavBar.js
 
 
 
@@ -28,7 +25,7 @@ Herramientas utilizadas
 - [node.js] - evented I/O for theAngularJS backend
 
 
-## Installation
+## Instalación
 
 Ecommerce navbar requires [Node.js](https://nodejs.org/) v10+ to run.
 
