@@ -10,11 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
-      display: "inline-block",
-      marginTop: '50px',
-      marginLeft: '50px',
-      height: "100%"
+        maxWidth:"400px"
     },
 });
 

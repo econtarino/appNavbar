@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import Item from '../Item/Item'
 import Grid from '@material-ui/core/Grid';
 function ItemList({products}){
+
     console.log(products)
     return (
-        <div style={{ display: "inline-block" }}>
+        <Grid container style={{marginTop:"50px"}} spacing={3}>
             {
-               products && products.map(p => <Item product={p} ></Item>) 
+               products && products.map(p => 
+               <Grid container item xs={4} >
+                    <Item product={p}></Item>
+               </Grid>) 
+
             }
-            
-        </div>
+        </Grid>
     )
 }
 
