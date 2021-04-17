@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
+import Container from '@material-ui/core/Container'
 
 const ItemListContainer = () => {
     const [ products , setProducts ] = useState([])
+
     const url = 'https://fakestoreapi.com/products/'
     useEffect( () => {
-        fetch(url).then((response) =>{
-            Promise.resolve(response.json())
-        }).then(response => {
-            setProducts(response)
+        fetch(url).then(response => {
+            return response.json()
+        })
+        .then(data => {
+            console.log(data)
+            setProducts(data)
         })
     },[])
 
@@ -16,7 +20,9 @@ const ItemListContainer = () => {
 
     return (
         <Container fixed>        
-            <ItemList products={products}> </ItemList>
+        <div>
+            { products && <ItemList products={products}> </ItemList> }
+        </div>
         </Container>
     )
 }
