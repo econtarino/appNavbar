@@ -20,8 +20,8 @@ Crea un componente ItemListContainer. Impórtalo dentro de App.js, y abajo de Na
 
 Herramientas utilizadas
 
-- [ReactJS] - HTML enhanced for web apps!
-- [MaterialUI] - awesome web-based text editor
+- [ReactJS] - web framework!
+- [MaterialUI] - for presentation
 - [node.js] - npm commands
 
 
