@@ -72,7 +72,7 @@ export default function NavBar() {
             <Menu>
             </Menu>
           <Typography className={classes.title} variant="h6" noWrap>
-            Mercado de Frutas
+            Ropa Online
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

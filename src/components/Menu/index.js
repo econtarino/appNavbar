@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import RocketIcon from '../RocketIcon';
 
 const useStyles = makeStyles((theme) => ({
@@ -59,6 +59,19 @@ const useStyles = makeStyles((theme) => ({
   }));
 export default function MenuCustom() {
     const classes = useStyles();
+    const [categories, setCategories] = useState();
+
+    const url = "https://fakestoreapi.com/products/";
+    useEffect(() => {
+      fetch(url)
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          setCategories(data.map(product => product.category));
+        });
+    }, []);
   return (
     <PopupState variant="popover" popupId="demo-popup-menu">
       {(popupState) => (
@@ -66,30 +79,12 @@ export default function MenuCustom() {
           <RocketIcon></RocketIcon>
           <Button variant="contained" color="primary" {...bindTrigger(popupState)}>
           <ShoppingCartIcon></ShoppingCartIcon>
-            Categorias Frutas
+            Categorías Productos
           </Button>
           <Menu {...bindMenu(popupState)}>
-            <MenuItem onClick={popupState.close}>Albaricoque</MenuItem>
-            <MenuItem onClick={popupState.close}>Arándano</MenuItem>
-            <MenuItem onClick={popupState.close}>Breva</MenuItem>
-            <MenuItem onClick={popupState.close}>Cereza</MenuItem>
-            <MenuItem onClick={popupState.close}>Ciruela</MenuItem>
-            <MenuItem onClick={popupState.close}>Endrina</MenuItem>
-            <MenuItem onClick={popupState.close}>Frambuesa</MenuItem>
-            <MenuItem onClick={popupState.close}>Fresa</MenuItem>
-            <MenuItem onClick={popupState.close}>Granada</MenuItem>
-            <MenuItem onClick={popupState.close}>Grosella</MenuItem>
-            <MenuItem onClick={popupState.close}>Lima</MenuItem>
-            <MenuItem onClick={popupState.close}>Limón</MenuItem>
-            <MenuItem onClick={popupState.close}>Mandarina</MenuItem>
-            <MenuItem onClick={popupState.close}>Melocotón</MenuItem>
-            <MenuItem onClick={popupState.close}>Melón</MenuItem>
-            <MenuItem onClick={popupState.close}>Membrillo</MenuItem>
-            <MenuItem onClick={popupState.close}>Naranja</MenuItem>
-            <MenuItem onClick={popupState.close}>Níspero</MenuItem>
-            <MenuItem onClick={popupState.close}>Pera</MenuItem>
-            <MenuItem onClick={popupState.close}>Piña</MenuItem>
-            <MenuItem onClick={popupState.close}>Plátano</MenuItem>
+          {
+            categories && categories.filter((product, pos)=>categories.indexOf(product) == pos).map(category => <MenuItem onClick={popupState.close}>{category}</MenuItem> )
+          }
           </Menu>
         </React.Fragment>
       )}
