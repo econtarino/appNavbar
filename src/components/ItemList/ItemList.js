@@ -5,10 +5,10 @@ function ItemList({ products }) {
   console.log(products);
   return (
     <Grid container style={{ marginTop: "50px" }} spacing={3}>
-      {products &&
+      { products &&
         products.map(p => (
           <Grid container item xs={4}>
-            <Item product={p}></Item>
+            <Item product={p} />
           </Grid>
         ))}
     </Grid>

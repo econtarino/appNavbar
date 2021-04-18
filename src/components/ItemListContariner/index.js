@@ -37,7 +37,7 @@ const ItemListContainer = () => {
   return (
     <Container fixed>
       {products ? (
-        <ItemList products={products}> </ItemList>
+        <ItemList products={products}/>
       ) : (
         <div className={classes.root}>
           <CircularProgress />
