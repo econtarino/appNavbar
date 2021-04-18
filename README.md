@@ -1,7 +1,7 @@
 # Ezequiel Contarino
 ## _Ecommerce navbar_
 
-![Alt Text](https://github.com/econtarino/appNavbar/blob/main/project_navbar_2.gif?raw=true)
+![Alt Text](https://github.com/econtarino/appNavbar/blob/main/hooks.gif?raw=true)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
