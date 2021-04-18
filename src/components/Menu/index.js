@@ -83,7 +83,7 @@ export default function MenuCustom() {
           </Button>
           <Menu {...bindMenu(popupState)}>
           {
-            categories && categories.filter((product, pos)=>categories.indexOf(product) == pos).map(category => <MenuItem onClick={popupState.close}>{category}</MenuItem> )
+            categories && categories.filter((category, pos)=>categories.indexOf(category) == pos).map(category => <MenuItem onClick={popupState.close}>{category}</MenuItem> )
           }
           </Menu>
         </React.Fragment>
